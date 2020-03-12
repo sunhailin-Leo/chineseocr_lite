@@ -1,8 +1,12 @@
-## 本项目基于[chineseocr](https://github.com/chineseocr/chineseocr) 与[psenet](https://github.com/WenmuZhou/PSENet.pytorch)  实现中文自然场景文字检测及识别
+# 项目简介
+
+* 项目 Fork From: [ouyanghuiyu/chineseocr_lite](https://github.com/ouyanghuiyu/chineseocr_lite)
+* 项目基于[chineseocr](https://github.com/chineseocr/chineseocr) 与[psenet](https://github.com/WenmuZhou/PSENet.pytorch)  实现中文自然场景文字检测及识别
+
 
 # 环境
-pytorch  1.2.0
-linux/macos
+系统环境: Linux / MacOS
+
 ## PSENET 编译
 ``` Bash
 cd psenet/pse
@@ -22,18 +26,22 @@ make
 - [ ]  mnn  实现 
 - [ ]  提供竖排文本训练方案
 
- 
 
-
-## web服务启动
+## web服务启动 (web.py)
 ``` Bash
-cd chineseocr_lite## 进入chineseocr目录
-python app.py 8080 ##8080端口号，可以设置任意端口
+# 进入chineseocr目录
+# web.py
+cd chineseocr_lite
+# 8080端口号，可以设置任意端口 
+python app.py 8080
+
+# Flask(端口 9001)
+cd chineseocr_lite 
+python flask_server.py
 ```
 
 ## 访问服务
 http://127.0.0.1:8080/ocr
-
 
 ## 识别结果展示
 
